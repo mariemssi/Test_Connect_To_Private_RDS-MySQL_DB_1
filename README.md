@@ -14,16 +14,16 @@
 3. Set Up your AWS Credentials AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY.
         
 4. Generate SSH Key pair: `ssh-keygen -f mykey`
-5. 
-   It generates 2 files mykey (private key) and mykey.pub (public key). Place the public key file in the root directory of your terraform code.
 
-    You can also reference an aws key pair if you have already one. You should update ec2_bastion_host.tf accordingly.
+   This command generates 2 files mykey (private key) and mykey.pub (public key). Place the public key file in the root directory of your terraform code.
+
+   You can also reference an AWS key pair if you have already one. Ensure to update ec2_bastion_host.tf accordingly.
 
    
    
-6. Initialize Terraform: `terraform init`
+5. Initialize Terraform: `terraform init`
    
-7. Review Terraform Plan (Optional): `terraform plan`
+6. Review Terraform Plan (Optional): `terraform plan`
    
    You can preview the changes Terraform will make to your infrastructure. For this, you should provide the Input Variables defined in variables.tf. You can define its values as default in the variables.tf file or you can define it as parameters of terraform plan and terraform apply commands
    or Terraform will prompt you to provide their values during the terraform apply process.
@@ -31,7 +31,7 @@
    😱 USERNAME and DB-PASSWORD are secrets and It's important to note that using these methods for secrets is not a best practice in production environments.
    For handling secrets securely, consider using more robust methods available in Terraform, such as using external secret management systems or environment variables.  
   
-8. Apply Terraform Changes: `terraform apply`
+7. Apply Terraform Changes: `terraform apply`
 
     Wait for Terraform to Complete, this process may take some time. Once complete, Terraform will display a summary of the changes made.
 
@@ -56,12 +56,13 @@
 ### With MySQL Workbench
 
 1. Define the needed parameters of the connexion like the screeshot below:
+   
 ![image](https://github.com/mariemssi/Test_Connect_To_Private_RDS-MySQL_DB_1/assets/69463864/70a39a9c-e370-4710-9899-1483c1264894)
 
 
 
 
-3. Run SQL queries After successfully connecting
+2. Run SQL queries After successfully connecting
  
 ## Destroying Test Infrastructure
   Destroy Resources (Optional): `terraform destroy`
@@ -69,4 +70,4 @@
 
 Additional details can be found [here](https://medium.com/@meriemiag/exploring-ways-to-connect-to-mysql-rds-database-102aec995673)
 
-*Please note that the testing environment discussed here is intended for testing purposes only and may not conform to best practices.*
+*Please note that the environment presented here is designed solely for testing purposes and may not adhere to best practices.*
