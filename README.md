@@ -59,8 +59,12 @@
 ![image](https://github.com/mariemssi/Test_Connect_To_Private_RDS-MySQL_DB_1/assets/69463864/70a39a9c-e370-4710-9899-1483c1264894)
 
 
-2. Run SQL queries After successfully connecting
+
+
+3. Run SQL queries After successfully connecting
  
 ## Destroying Test Infrastructure
   Destroy Resources (Optional): `terraform destroy`
   Once you have finished testing, it's important to destroy the test environment to avoid incurring unnecessary charges from AWS 😉.
+
+*Please note that the testing environment discussed here is intended for testing purposes only and may not conform to best practices.*
